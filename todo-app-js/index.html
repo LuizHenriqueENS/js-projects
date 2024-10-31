@@ -4,24 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TO-DO APP 0.1v</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="container">
-       <h1>To Do List</h1>
+       <h1 style="justify-self: center;">TODO APP</h1>
        <input id="task-field" value="">
-       <button onclick="addTask()">ADD</button>
-       <h2>Task list</h2>
-       <table >
+       <button onclick="createTask()">Add</button>
+       <h2 style="justify-self: center;">Task list</h2>
+       <table>
         <tbody id= "task">
             <tr>
-                <th>#</th>
+                <th>Id</th>
                 <th>Tarefa</th>
                 <th></th>
                 <th></th>
             </tr>
         </tbody>
        </table>
-       <div id="task-container"></div>
     </div>
 </body>
 <script src="script.js"></script>

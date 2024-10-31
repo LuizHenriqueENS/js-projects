@@ -1,68 +1,51 @@
-let taskContainer = document.getElementById('task')
-let listOfTask = []
-
-
-// function addTask(){
-//     let createTask = document.createElement('tr')
-//     let createTD = document.createElement('td')
-//     let taskName = document.createElement('td')
-//     let taskDelete = document.createElement('button')
-//     let taskEdit = document.createElement('button')
-//     taskName.innerHTML = document.getElementById('task-field').value
-
-//     taskContainer.appendChild(createTask)
-
-//     createTask.appendChild(taskName)
-//     createTask.appendChild(taskDelete)
-//     createTask.appendChild(taskEdit)
-    
-//     taskDelete.setAttribute('onclick', 'getTableIndex(this.cellIndex)')
-// }
-
-function getTableIndex(element){
-    alert(element)
-}
+const taskContainer = document.getElementById('task')
+const taskField = document.getElementById('task-field');
+let idCount = 1;
 
 function createTask(){
-    let new_task = document.createElement('div')
-    let newTaskDeleteButton = creatDeleteButton()
-    let newTaskEditButton = createEditButton()
+    if(taskField.value === ''){
+        alert('Você precisa dizer qual tarefa deseja registrar!')
+        return
+    }
 
-    createTaskCard(new_task, newTaskDeleteButton, newTaskEditButton)
-}
-
-function createTaskCard(new_task, newTaskDeleteButton, newTaskEditButton) {
-    let inputField = document.getElementById('task-field')
-    new_task.setAttribute("id", `${taskContainer.childElementCount}`)
-    new_task.innerHTML = `${inputField.value}`
-    inputField.value = ''
-    taskContainer.appendChild(new_task)
-    new_task.appendChild(newTaskDeleteButton)
-    new_task.appendChild(newTaskEditButton)
+    let trElement =  document.createElement('tr')
+    trElement.setAttribute('id', `task-${idCount}`)
+    taskContainer.appendChild(trElement)
     
+    for(let i = 0; i < 4; i++ ){
+        trElement.appendChild(document.createElement('td'))
+    }
+    trElement.children[0].innerHTML = `#${idCount}`
+    trElement.children[1].innerHTML = taskField.value
+    trElement.children[2].appendChild(creatDeleteButton())
+    trElement.children[3].appendChild(createEditButton())
+    idCount++
+    taskField.value = ''
 }
 
 function creatDeleteButton() {
     let newTaskDeleteButton = document.createElement('button')
     newTaskDeleteButton.innerHTML = "delete"
-    newTaskDeleteButton.setAttribute('onclick', 'removeTask(this.parentNode)')
+    newTaskDeleteButton.setAttribute('onclick', 'removeTask(this.parentNode.parentNode)')
     return newTaskDeleteButton
 }
 
 function createEditButton() {
     let newTaskEditButton = document.createElement('button')
     newTaskEditButton.innerHTML = "edit"
-    newTaskEditButton.setAttribute('onclick', 'editTask(this.parentElement.id)')
+    newTaskEditButton.setAttribute('onclick', 'editTask(this.parentNode.parentNode.id)')
     return newTaskEditButton
 }
 
-function removeTask(id){
+function removeTask(parenteNodeID){
     let confirmDelete = confirm("Deseja mesmo deletar a tarefa?")
     if(confirmDelete){
-        taskContainer.removeChild(id)
+        taskContainer.removeChild(parenteNodeID)
     }
 }
 
 function editTask(parentID){
-    alert(`O ID é: ${parentID}`)
+    let editedTask = prompt('Sobrescreva a tarefa anterior...')
+    if(editedTask === '') return
+    document.getElementById(parentID).children[1].innerHTML = editedTask
 }
