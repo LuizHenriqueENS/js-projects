@@ -7,34 +7,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <table>
-        <tr>
-            <td>
-                X
-            </td>
-            <td>X</td>
-            <td>X
-
-            </td>
-        </tr>
-        <tr>
-            <td>
-                X
-            </td>
-            <td>X</td>
-            <td>X
-                
+    <h1>JOGO DA VELHA</h1>
+    <h2 id="playersTurn">É a vez do <u >X</u></h2>
+    <table>    
+    <tr>
+            <td id="pos-1" onclick="playGame(this)"></td>
+            <td id="pos-2" onclick="playGame(this)"></td>
+            <td id="pos-3" onclick="playGame(this)"></td>
             </td>
         </tr>
         <tr>
-            <td>
-                X
-            </td>
-            <td>X</td>
-            <td>X
-                
+            <td id="pos-4" onclick="playGame(this)"></td>
+            <td id="pos-5" onclick="playGame(this)"></td>
+            <td id="pos-6" onclick="playGame(this)"></td>
+        </tr>
+        <tr>
+            <td id="pos-7" onclick="playGame(this)"></td>
+            <td id="pos-8" onclick="playGame(this)"></td>
+            <td id="pos-9" onclick="playGame(this)"></td>
             </td>
         </tr>
     </table>
+    <h1 id="winner"></h1>
+    <div>
+        <button class="restartButton" onclick="restartGame()">RECOMEÇAR</button>
+
+    </div>
 </body>
+<script src="script.js"></script>
 </html>
