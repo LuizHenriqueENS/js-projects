@@ -1,0 +1,52 @@
+body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle{
+    margin: auto;
+    height: 100px;
+    width: 100px;
+    background-color: #007c34;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    color: white;
+}
+
+.bet-circle{
+    height: 100px;
+    width: 100px;
+    border: solid 1px #007c34;;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    color: black;
+}
+
+.icon-circle{
+    height: 100px;
+    width: 100px;
+    border: solid 1px #007c34;;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    color: black;
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+.icon-circle:hover{
+    opacity: 1;
+    transition: 1s ease;
+}

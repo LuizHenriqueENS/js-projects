@@ -1,13 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mega Sena APP</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
-    
+    <table id="mega-sena-results">
+        <tbody>
+            <tr>
+                <td><span class="circle">60</span></td>
+                <td><span class="circle">25</span></td>
+                <td><span class="circle">10</span></td>
+                <td><span class="circle">5</span></td>
+                <td><span class="circle">50</span></td>
+                <td><span class="circle">45</span></td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>Adicione seu(s) jogos(s)</h2>
+    <form id="bet-numbers">
+        <div>
+            <input type="text" id="numbers-to-add" name="Apostas">
+            <label for="example">Use vírgula para separar os números</label>
+        </div>
+        <div>
+            <input type="submit" value="adicionar">
+        </div>
+    </form>
+
+    <table id="player-bets">
+
+    </table>
 </body>
 <script src="script.js"></script>
+
 </html>
