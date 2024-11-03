@@ -1,0 +1,26 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.container{
+    width: 100%;
+    display: flex; 
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+.texts{
+    text-align: center;
+}
+
+.brl-informations, .usd-informations{
+    justify-items: center;
+}
