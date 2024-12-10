@@ -1,6 +1,0 @@
-.linha-1, .linha-2, .linha-3{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    border: 1px black solid;
-}
