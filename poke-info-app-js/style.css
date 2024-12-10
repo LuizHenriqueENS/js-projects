@@ -1,0 +1,50 @@
+html{
+  
+  background-color: greenyellow;
+}
+h2{
+  justify-self: center;
+}
+
+.container-div{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  justify-content: center;
+}
+.arrow-imgs{
+  background-color: transparent;
+  border: 0px;
+}
+
+.fa{
+  font-size: 32px;
+}
+.fa:hover{
+  font-size: 50px;
+  transition: 0.2ms;
+}
+
+.pokemon-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: whitesmoke;
+  transition: 0.3s;
+  justify-items: center;
+}
+
+.pokemon-page{
+  width:40px;
+  text-align: center;
+  height: 40px;
+}
+
+.container {
+  padding: 2px 16px;
+}
